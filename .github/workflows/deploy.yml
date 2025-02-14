@@ -31,6 +31,8 @@ jobs:
         run: npm run build
       - name: Remove any symlinks or hard links
         run: find ./build -type l -exec rm -f {} +
+      - name: Remove any dotfiles
+        run: find ./build -name ".*" -exec rm -rf {} +
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload Pages Artifact
@@ -50,6 +52,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
+      - name: Remove any dotfiles in downloaded artifact
+        run: find . -name ".*" -exec rm -rf {} +
       - name: List artifact contents
         run: ls -R
       - name: Deploy to GitHub Pages
