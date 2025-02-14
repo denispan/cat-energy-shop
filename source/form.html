@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кэт энерджи</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="../favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  </head>
+  <body class="page__body">
+
+    <header class="page__header header header--inner header--menu-opened header--menu-nojs">
+      <div class="wrapper header__wrapper">
+        <a class="header-logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/logo-header-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-header-tablet.svg">
+            <img class="header-logo__image" src="img/logo-header-mobile.svg" alt="Кэт энерджи">
+          </picture>
+        </a>
+        <button class="button header__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
+        <nav class="header__nav main-nav">
+          <ul class="header__nav-list menu list-reset">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="menu__item menu__item--current">
+              <a class="menu__link" href="form.html">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page__main page__main--overflow">
+
+      <section class="select-program">
+        <div class="wrapper">
+          <div class="select-program__wrapper">
+            <h1 class="page-title select-program__title">
+              Подбор программы
+            </h1>
+            <p class="select-program__text">
+              Заполните анкету, и мы подберем программу питания для вашего кота
+            </p>
+
+            <form class="program-form" action="https://denispan.ru:8080/api/echo/" method="post">
+
+              <fieldset class="program-form__group program-form__group--main-info">
+                <legend class="visually-hidden">
+                  Основная информация
+                </legend>
+                <ul class="program-form__list list-reset">
+                  <li class="program-form__field text-field">
+                    <label class="text-field__label" for="main-info__name">
+                      Имя:*
+                    </label>
+                    <input class="text-field__input" id="main-info__name" name="main-info__name" type="text" placeholder="Барсик" required>
+                  </li>
+                  <li class="program-form__field text-field">
+                    <label class="text-field__label" for="main-info__weight">
+                      Вес (кг):*
+                    </label>
+                    <input class="text-field__input" id="main-info__weight" name="main-info__weight" type="text" placeholder="7" required>
+                  </li>
+                  <li class="program-form__field text-field">
+                    <label class="text-field__label" for="main-info__age">
+                      Возраст (лет):
+                    </label>
+                    <input class="text-field__input" id="main-info__age" name="main-info__age" type="text" placeholder="7">
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="program-form__group program-form__group--program-type">
+                <legend class="visually-hidden">
+                  Выбор типа программы
+                </legend>
+                <ul class="program-form__radio-list list-reset">
+                  <li class="radio-control">
+                    <input class="radio-control__input visually-hidden" type="radio" name="program-type" id="weight-loss__input" value="weight-loss" checked>
+                    <label class="radio-control__label" for="weight-loss__input">
+                      Похудение
+                    </label>
+                  </li>
+                  <li class="radio-control">
+                    <input class="radio-control__input visually-hidden" type="radio" name="program-type" id="weight-gain__input" value="weight-gain">
+                    <label class="radio-control__label" for="weight-gain__input">
+                      Набор массы
+                    </label>
+                  </li>
+                  <li class="radio-control">
+                    <input class="radio-control__input visually-hidden" type="radio" name="program-type" id="need-advice__input" value="need-advice">
+                    <label class="radio-control__label" for="need-advice__input">
+                      Не знаю (Нужен ваш совет)
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="program-form__group program-form__group--contacts">
+                <h2 class="program-form__title program-form__title--contacts">
+                  <span>Контактные данные (владельца кота)</span>
+                </h2>
+                <ul class="program-form__list program-form__list--contacts list-reset">
+                  <li class="program-form__field text-field">
+                    <label class="text-field__label" for="main-info__email">
+                      E-mail:*
+                    </label>
+                    <input class="text-field__input text-field__input--iconed" id="main-info__email" name="contacts__email" type="email" placeholder="kuklachev@gmail.com" required>
+                    <svg class="text-field__icon text-field__icon--email" width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-input-mail"></use>
+                    </svg>
+                  </li>
+                  <li class="program-form__field text-field">
+                    <label class="text-field__label" for="main-info__phone">
+                      Телефон:*
+                    </label>
+                    <input class="text-field__input text-field__input--iconed" id="main-info__phone" name="contacts__email" type="tel" placeholder="8 (960) 900-60-90" required>
+                    <svg class="text-field__icon text-field__icon--phone" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-input-phone"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="program-form__group program-form__group--comment">
+                <h2 class="program-form__title program-form__title--comment">
+                  <span>Комментарий</span>
+                </h2>
+                <div class="program-form__field text-field">
+                  <label class="text-field__label" for="comment">
+                    <span class="visually-hidden">Введите Ваш комментарий</span>
+                  </label>
+                  <textarea class="text-field__input text-field__input--textarea"
+                            name="comment__textarea"
+                            id="comment"
+                            rows="7"
+                            placeholder="Расскажите обо всех повадках кота"
+                  ></textarea>
+                </div>
+              </fieldset>
+
+              <fieldset class="program-form__group program-form__group--additional">
+                <h2 class="program-form__title program-form__title--additional">
+                  <span>Дополнительно</span>
+                </h2>
+                <ul class="program-form__checkbox-list list-reset">
+                  <li class="checkbox-control">
+                    <input class="checkbox-control__input visually-hidden visually-hidden" type="checkbox" name="additionally" id="sweetener" value="sweetener" checked>
+                    <label class="checkbox-control__label" for="sweetener">
+                      Cахарозаменитель
+                    </label>
+                  </li>
+                  <li class="checkbox-control">
+                    <input class="checkbox-control__input visually-hidden visually-hidden" type="checkbox" name="additionally" id="pure-water" value="pure-water">
+                    <label class="checkbox-control__label" for="pure-water">
+                      Питьевая вода
+                    </label>
+                  </li>
+                  <li class="checkbox-control">
+                    <input class="checkbox-control__input visually-hidden visually-hidden" type="checkbox" name="additionally" id="milk" value="milk">
+                    <label class="checkbox-control__label" for="milk">
+                      Молоко
+                    </label>
+                  </li>
+                  <li class="checkbox-control">
+                    <input class="checkbox-control__input visually-hidden visually-hidden" type="checkbox" name="additionally" id="vitamins" value="vitamins">
+                    <label class="checkbox-control__label" for="vitamins">
+                      Витамины
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <div class="program-form__wrapper-button">
+                <button class="button button--primary program-form__button" type="submit">
+                  Отправить заявку
+                </button>
+
+                <p class="program-form__legend">
+                  * — Обязательные поля
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page__footer">
+
+      <section class="partnership partnership--inner">
+        <div class="wrapper partnership__wrapper">
+          <div class="partnership__description">
+            <h3 class="partnership__title">
+              Приглашаем к&nbsp;сотрудничеству дилеров!
+            </h3>
+            <address class="partnership__text">
+              ул. Большая Конюшенная, д. 19/8 <span class="partnership__text partnership__text--city">Санкт-Петербург</span>
+            </address>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe class="map__view map__view--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.234479716711!2d30.322906249517438!3d59.93852432963198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1641256441274!5m2!1sru!2sru"
+                  allowfullscreen="" loading="lazy">
+          </iframe>
+          <picture>
+            <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1280px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="map__image map__image--nojs" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Наш адрес на карте">
+          </picture>
+        </div>
+      </section>
+
+      <section class="footer-links">
+        <h3 class="visually-hidden">
+          Ссылки на наши соцсети
+        </h3>
+        <div class="wrapper">
+
+          <div class="footer-links__list list-reset">
+            <div class="footer-links__item footer-links__item--logo">
+              <a class="footer-links__logo" href="index.html">
+                <img src="./img/footer-logo.svg" width="128" height="24"  alt="Кэт энерджи">
+              </a>
+            </div>
+            <div class="footer-links__item footer-links__item--social">
+              <ul class="social-list list-reset">
+                <li class="social-list__item">
+                  <a class="social-list__link social-list__link--vk" href="https://vk.com/">
+                    <span class="visually-hidden">ВКонтакте</span>
+                    <svg  width="23" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#social-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link social-list__link--ig" href="https://www.instagram.com/">
+                    <span class="visually-hidden">Инстаграм</span>
+                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#social-ig"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link social-list__link--fb" href="https://www.facebook.com/">
+                    <span class="visually-hidden">Фейсбук</span>
+                    <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#social-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-links__item footer-links__item--copyright copyright">
+              <a class="copyright__link" href="https://github.com/denispan">
+                <img class="copyright__logo-text" src="./img/icons/dp-logo.png"  width="20" height="21" alt="logo">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </footer>
+
+    <script src="./js/menu-toggle.js"></script>
+    <script src="./js/map-nojs_remove.js"></script>
+
+  </body>
+</html>

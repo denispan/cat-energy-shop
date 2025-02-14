@@ -1,0 +1,29 @@
+.header-logo {
+  margin-right: 10px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header-logo__image {
+  width: 191px;
+  height: 38px;
+  margin-right: 56px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+    margin-right: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}

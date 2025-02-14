@@ -1,0 +1,9 @@
+.main-nav {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

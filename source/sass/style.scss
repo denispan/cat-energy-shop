@@ -1,0 +1,46 @@
+/*global*/
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+@import "global/visually-hidden.scss";
+@import "global/list-reset.scss";
+
+/*index.html*/
+@import "blocks/page.scss";
+@import "blocks/page-title.scss";
+@import "blocks/button.scss";
+@import "blocks/map.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/program-cards.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/header.scss";
+@import "blocks/header-logo.scss";
+@import "blocks/menu.scss";
+@import "blocks/promo.scss";
+@import "blocks/section-title.scss";
+@import "blocks/work.scss";
+@import "blocks/example.scss";
+@import "blocks/nowrap.scss";
+@import "blocks/parameters-list.scss";
+@import "blocks/cat-slider.scss";
+@import "blocks/partnership.scss";
+@import "blocks/footer-links.scss";
+@import "blocks/copyright.scss";
+@import "blocks/scale.scss";
+@import "blocks/social-list.scss";
+
+/*form.html*/
+@import "blocks/select-program.scss";
+@import "blocks/text-field.scss";
+@import "blocks/radio-control.scss";
+@import "blocks/program-form.scss";
+@import "blocks/checkbox-control.scss";
+
+/*catalog.html*/
+@import "blocks/catalog.scss";
+@import "blocks/card.scss";
+@import "blocks/catalog-additional.scss";
+@import "blocks/description.scss";
+@import "blocks/extra-goods.scss";
+@import "blocks/offer.scss";
+@import "blocks/catalog-list.scss";

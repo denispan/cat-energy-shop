@@ -1,0 +1,32 @@
+.catalog {
+  padding-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 49px;
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 59px;
+    padding-bottom: 76px;
+  }
+}
+
+.catalog__title {
+  font-family: $font-custom;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: $color-black;
+  margin: 0 0 40px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 84px;
+  }
+}

@@ -1,0 +1,91 @@
+.menu {
+  width: 100%;
+  text-align: center;
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    background-color: transparent;
+  }
+
+  &--index .menu__link {
+    @media (min-width: $desktop-width) {
+      color: $color-white;
+    }
+  }
+
+  &--index .menu__item--current::before {
+    @media (min-width: $desktop-width) {
+      background-color: $color-white;
+    }
+  }
+}
+
+.menu__item {
+  @media (max-width: $mobile-only-width) {
+    border-top: 1px solid $color-grey-11;
+
+    &:last-child {
+      border-bottom: 1px solid $color-grey-11;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 36px;
+
+    &--current {
+      position: relative;
+    }
+
+    &--current::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      right: 0;
+      bottom: 6px;
+      background-color: $color-green-1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 35px;
+
+    &--current::before {
+      bottom: 10px;
+    }
+  }
+}
+
+.menu__link {
+  display: block;
+  padding: 22px 0;
+  font-family: $font-custom;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: $color-black;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-family: $font-custom;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

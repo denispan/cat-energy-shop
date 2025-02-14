@@ -1,0 +1,40 @@
+.map {
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+}
+
+.map__view {
+  width: 100%;
+  height: 100%;
+  border: 0;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.map__image {
+  display: none;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--nojs {
+    display: block;
+  }
+}
