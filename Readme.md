@@ -1,5 +1,7 @@
 # [Проект «Cat energy»](https://denispan.github.io/cat-energy-shop/index.html)
 
+[denispan.github.io/cat-energy-shop/](https://denispan.github.io/cat-energy-shop/index.html) </br></br>
+
 Магазин функционального питания для котов </br> «Cat energy» – Занялся собой? Займись котом! </br></br>
 <strong>Адаптивная Pixel Perfect верстка по макету Figma. </br> Проект БЕЗ динамики. </strong>
 
