@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Remove any symlinks or hard links
+        run: find ./build -type l -exec rm -f {} +
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload Pages Artifact
@@ -48,6 +50,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
+      - name: Verify artifact size
+        run: du -sh ./github-pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
