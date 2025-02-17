@@ -2,7 +2,8 @@
 
 [denispan.github.io/cat-energy-shop](https://denispan.github.io/cat-energy-shop/index.html) </br></br>
 
-Магазин функционального питания для котов </br> «Cat energy» – Занялся собой? Займись котом! </br></br>
+Магазин функционального питания для котов </br> «Cat energy» – Занялся собой? Займись котом! </br>
+Данные из формы [на странице подбора программы питания](https://denispan.github.io/cat-energy-shop/form.html) отправляются на мой сервер и возвращаются для проверки</br></br>
 <strong>Адаптивная Pixel Perfect верстка по макету Figma. </br> Проект БЕЗ динамики. </strong>
 
 ## Доступно три страницы
@@ -11,8 +12,6 @@
 | Desktop | Tablet | Mobile |
 |:---------------:|:--------------:|:----------------:|
 | <img width="300" alt="Desktop version" src="https://github.com/user-attachments/assets/0e2274fd-c20d-4a38-bb66-460847b2949a" /> | <img width="200" alt="Tablet version" src="https://github.com/user-attachments/assets/58c59b62-1faf-4c85-a5ba-9806f90f4034" /> | <img width="150" alt="Mobile version" src="https://github.com/user-attachments/assets/d72bb8ae-ace4-495c-aba4-5dae11da9e0b" /> |
-
-
 
 ### [Страница каталога](https://denispan.github.io/cat-energy-shop/catalog.html)
 | Desktop | Tablet | Mobile |
